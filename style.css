@@ -1,0 +1,162 @@
+:root {
+    --bs-primary: #1a4d2e;
+    --bs-primary-rgb: 26, 77, 46;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #2F2F2F;
+}
+
+.hero-image {
+    min-height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.transform-30deg {
+    transform: rotate(30deg);
+    transform-origin: top right;
+}
+
+.floating-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-image {
+        min-height: 300px;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    .navbar-collapse {
+        background: rgba(26, 77, 46, 0.9);
+        margin-top: 10px;
+    }
+}
+
+.navbar-dark {
+    background-color: var(--bs-primary);
+}
+
+.nav-item {
+    text-decoration-color: white;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.triangle {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.triangle:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--bs-primary);
+}
+
+.portfolio-filter .btn-check:checked+.btn {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.tilt-effect {
+    transition: transform 0.3s;
+}
+
+.tilt-effect:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+    --bs-bg-opacity: 0.95;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.footer .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.footer small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .input-group {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+}
+
+.footer .form-control {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.footer .form-control:focus {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer .btn-sm {
+    padding: 0.25rem 0.5rem;
+}
